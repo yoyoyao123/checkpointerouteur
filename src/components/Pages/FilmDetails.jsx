@@ -1,12 +1,12 @@
-import React from 'react'
+import React from 'react';
 import { useParams } from 'react-router-dom';
-import NavBar from './../NavBar';
+import NavBar from '../NavBar';
 
 function FilmDetails(props) {
 
   let id = useParams().id;
 
-  let film = props.films.find(f => f.id == id);
+  let film = props.films.find(film => film.id == id);
 
 
   // let videoLink = 
@@ -30,5 +30,5 @@ function FilmDetails(props) {
   )
 }
 
-export default FilmDetails
+export default FilmDetails;
 

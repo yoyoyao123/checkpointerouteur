@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-import NavBar from './../NavBar';
-
+import React, { useState } from 'react';
+import NavBar from '../NavBar';
+import Film from '../Film';
 
 function Home(props) {
 
@@ -23,15 +23,14 @@ function Home(props) {
       </div>
       <main className="container py-2" >
         <div className="row miabox-card">
-          {props.films.filter((film) => film.title.toLowerCase().includes(title.toLocaleLowerCase()) ).map(film => (
+          {props.films.filter(film => film.title.toLowerCase().includes(title.toLocaleLowerCase()) ).map(film => (
               <Film film={film}/>
           ))}
-           
         </div>
       </main>
     </div>
   )
 }
 
-export default Home
+export default Home;
 
